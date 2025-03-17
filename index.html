@@ -26,7 +26,7 @@
             margin-bottom: 30px;
         }
 
-        .filter-btn {
+        .filter-btn, .inquiry-btn {
             padding: 12px 25px;
             border: none;
             border-radius: 25px;
@@ -43,8 +43,17 @@
             transform: scale(1.05);
         }
 
-        .filter-btn:hover:not(.active) {
+        .filter-btn:hover:not(.active), .inquiry-btn:hover {
             background-color: #e0e0e0;
+        }
+
+        .inquiry-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .inquiry-btn:hover {
+            background-color: #1976D2;
         }
 
         .insurance-list {
@@ -87,10 +96,10 @@
         <button class="filter-btn" data-type="all">전체보기</button>
         <button class="filter-btn" data-type="life">생명보험</button>
         <button class="filter-btn" data-type="property">손해보험</button>
+        <button class="inquiry-btn" onclick="window.open('inquiry.html', '_blank', 'width=400,height=500')">보험문의하기</button>
     </div>
 
     <div class="insurance-list">
-        <!-- 생명보험 회사 -->
         <div class="company-card" data-type="life"><a href="tel:1588-0100">삼성생명</a></div>
         <div class="company-card" data-type="life"><a href="tel:1588-3311">한화생명</a></div>
         <div class="company-card" data-type="life"><a href="tel:1588-9898">교보생명</a></div>
@@ -105,8 +114,6 @@
         <div class="company-card" data-type="life"><a href="tel:1588-3366">KDB생명</a></div>
         <div class="company-card" data-type="life"><a href="tel:1588-8282">동양생명</a></div>
         <div class="company-card" data-type="life"><a href="tel:1588-3838">ABL생명</a></div>
-
-        <!-- 손해보험 회사 -->
         <div class="company-card" data-type="property"><a href="tel:1588-5656">삼성화재</a></div>
         <div class="company-card" data-type="property"><a href="tel:1588-5114">현대해상</a></div>
         <div class="company-card" data-type="property"><a href="tel:1566-8000">DB손해보험</a></div>
