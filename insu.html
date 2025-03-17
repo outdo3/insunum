@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 보험 회사</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn.active {
+            background-color: #4CAF50;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .filter-btn:hover:not(.active) {
+            background-color: #e0e0e0;
+        }
+
+        .insurance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .company-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .company-card a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            height: 100%;
+        }
+
+        .company-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>대한민국 보험 회사 목록</h1>
+    </div>
+
+    <div class="button-container">
+        <button class="filter-btn" data-type="all">전체보기</button>
+        <button class="filter-btn" data-type="life">생명보험</button>
+        <button class="filter-btn" data-type="property">손해보험</button>
+    </div>
+
+    <div class="insurance-list">
+        <!-- 생명보험 회사 -->
+        <div class="company-card" data-type="life"><a href="tel:1588-0100">삼성생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-3311">한화생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-9898">교보생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1670-5000">신한라이프</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1522-1200">NH농협생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1644-2828">미래에셋생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-4000">DB생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-0900">메트라이프생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1577-1000">AIA생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-4300">푸르덴셜생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1544-3636">DGB생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-3366">KDB생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-8282">동양생명</a></div>
+        <div class="company-card" data-type="life"><a href="tel:1588-3838">ABL생명</a></div>
+
+        <!-- 손해보험 회사 -->
+        <div class="company-card" data-type="property"><a href="tel:1588-5656">삼성화재</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1588-5114">현대해상</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1566-8000">DB손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1566-1000">KB손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1544-0114">메리츠화재</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1899-7755">한화손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1588-5007">롯데손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1588-3344">흥국화재</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1644-0100">MG손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1588-5959">AIG손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1544-3114">AXA손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1522-3500">더베스트손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1566-3000">에이스손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1533-0100">하나손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1522-0072">NH농협손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1533-3000">하이카손해보험</a></div>
+        <div class="company-card" data-type="property"><a href="tel:1544-2700">캐롯손해보험</a></div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const companies = document.querySelectorAll('.company-card');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterType = button.dataset.type;
+                
+                companies.forEach(company => {
+                    if (filterType === 'all' || company.dataset.type === filterType) {
+                        company.classList.remove('hidden');
+                    } else {
+                        company.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        document.querySelector('[data-type="all"]').classList.add('active');
+    </script>
+</body>
+</html>
